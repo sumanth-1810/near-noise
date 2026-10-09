@@ -57,9 +57,14 @@ export const usePlayer = create<PlayerState>((set, get) => {
     const token = ++request
     if (!audio.paused) await fadeTo(0, FADE_OUT_MS)
     if (token !== request) return
-    audio.src = track.preview
-    audio.volume = 0
     set({ index, status: 'loading', progress: 0 })
+    if (!track.preview) {
+      set({ status: 'error' })
+      return
+    }
+    // The phone loads the clip from this site. Deezer and Apple answer the listener's country differently.
+    audio.src = `/api/preview?u=${encodeURIComponent(track.preview)}`
+    audio.volume = 0
     try {
       await audio.play()
       if (token !== request) return

@@ -262,7 +262,7 @@ function Listen({ genre }: { genre: Genre }) {
               )
             })}
           </ul>
-          <p className="text-[11px] text-fg-3">30-second previews from Deezer</p>
+          <p className="text-[11px] text-fg-3">30-second previews</p>
         </>
       )}
     </section>
