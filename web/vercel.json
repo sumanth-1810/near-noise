@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/lb/1/metadata/artist", "destination": "https://api.listenbrainz.org/1/metadata/artist/" },
+    { "source": "/api/lb-labs/:path*", "destination": "https://labs.api.listenbrainz.org/:path*" },
+    { "source": "/api/lb/:path*", "destination": "https://api.listenbrainz.org/:path*" },
+    { "source": "/api/deezer/:path*", "destination": "https://api.deezer.com/:path*" }
+  ]
+}

@@ -32,7 +32,7 @@ async function getJson<T>(url: string, init?: RequestInit): Promise<T> {
 }
 
 export async function artistMeta(mbid: string): Promise<LbMeta | null> {
-  const data = await getJson<LbMeta[]>(`${LB}/1/metadata/artist/?artist_mbids=${mbid}&inc=tag`)
+  const data = await getJson<LbMeta[]>(`${LB}/1/metadata/artist?artist_mbids=${mbid}&inc=tag`)
   return data[0] ?? null
 }
 
