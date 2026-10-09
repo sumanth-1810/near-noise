@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-The map opens at http://localhost:5173. The dev server proxies Deezer and ListenBrainz, which the artist sheet uses for previews and “fans also listen to.”
+The map opens at https://near-noise.vercel.app/. The dev server proxies Deezer and ListenBrainz, which the artist sheet uses for previews and “fans also listen to.”
 
 ## What’s in the map
 
